@@ -2,10 +2,11 @@ const mongoose = require("mongoose")
 
 const TodoData = new mongoose.Schema({
     todo:{
-        require: true,
-        type: String
+        completed: Boolean,
+        task: String
     }
 })
 
 
-module.exports = new mongoose.model("Todo", TodoData)
+const Todos = mongoose.model("Todo", TodoData)
+module.exports = Todos;
