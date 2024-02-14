@@ -39,20 +39,17 @@ const todos = require("./routes/todos")
 
 app.use("/", todos)
 
-app.listen(port, ()=>{console.log("App listening on port: 3000")
+app.listen(port, ()=>{console.log("App listening on port: 3000")})
 
-      connectDb()
-})
-
-// mongoose.connect("mongodb://127.0.0.1:27017/Todos")
+mongoose.connect("mongodb://127.0.0.1:27017/Todos")
 
 // const mongodb = mongoose.connection;
 
-async function connectDb(){
-    try{
-        await mongoose.connect("mongodb://127.0.0.1:27017/Todos")
-        console.log("db connected")
-    }catch(err){
-        console.log(err)
-    }
-}
+// async function connectDb(){
+//     try{
+//         await 
+//         console.log("db connected")
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
